@@ -38,7 +38,7 @@ const TodoForm = (props) => {
           onChange={handleTaskInputChange}
         />
         <button type='submit' className='btn btn__primary btn__lg'>
-          Add
+          Add +
         </button>
       </form>
     </div>

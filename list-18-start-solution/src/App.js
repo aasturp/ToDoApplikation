@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className='todoapp stack-large'>
-      <h1>My ToDo</h1>
+      <h1>☆ My ToDo ☆</h1>
       <TodoForm addTask={addTask} />
 
       {/* <h2 id='list-heading'>Task list</h2> */}
