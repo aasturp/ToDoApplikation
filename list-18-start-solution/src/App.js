@@ -1,22 +1,14 @@
-<<<<<<< HEAD
 import './App.css'
 import { List } from './List'
 import { MapLoopList } from './MapLoopList'
 import TodoForm from './Components/TodoForm'
-=======
-import "./App.css";
-import { List } from "./List";
-import { MapLoopList } from "./MapLoopList";
-import React from "react";
-
-
->>>>>>> 83e4438adaf46c485f8064b397c7387141685ff1
 
 function App(props) {
   return (
     <div className='todoapp stack-large'>
       <h1>Todo</h1>
       <TodoForm />
+
       <div className='filters btn-group stack-exception'>
         <button type='button' className='btn toggle-btn' aria-pressed='true'>
           <span className='visually-hidden'>Show </span>
