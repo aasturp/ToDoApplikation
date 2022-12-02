@@ -10,6 +10,19 @@ function App() {
     setToDos(prevState => [...prevState, todo])
   }
 
+  function toDoComplete(id) {
+    setToDos(
+      todos.map((todo)=> {
+        if(todo.id === id) {
+          return {
+            ...todo, completed:!todo.completed 
+          }
+        }
+        return todo;
+      })
+    )
+  }
+
   return (
     <div className='todoapp stack-large'>
       <h1>ToDo</h1>
@@ -32,7 +45,7 @@ function App() {
         </button>
       </div> */}
       <h2 id='list-heading'>Task list</h2>
-      <TodoList todos={todos} />
+      <TodoList todos={todos}toDoComplete={toDoComplete} />
 
       {/*     <ul
         role="list"

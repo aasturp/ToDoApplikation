@@ -1,12 +1,19 @@
 import React from 'react'
 
+
+
 export default function Todo({ todo }) {
+
+  function handleCheckBox() {
+    
+  }
+
   return (
     <div>
       <ul>
         <li className='todo stack-small'>
           <div className='c-cb'>
-            <input id='todo-0' type='checkbox' checked={todo.completed} />
+            <input id='todo-0' type='checkbox' checked={todo.completed} onClick={handleCheckBox}/>
             <label className='todo-label' htmlFor='todo-0'></label>
           </div>
           {/*  <div className='btn-group'>
