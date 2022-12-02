@@ -1,9 +1,7 @@
 import "./App.css";
-import { List } from "./List";
-import { MapLoopList } from "./MapLoopList";
+// import { List } from "./List";
+// import { MapLoopList } from "./MapLoopList";
 import React from "react";
-
-
 
 function App(props) {
   return (
