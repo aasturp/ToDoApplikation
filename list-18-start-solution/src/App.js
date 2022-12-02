@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import './App.css'
 import { List } from './List'
 import { MapLoopList } from './MapLoopList'
 import TodoForm from './Components/TodoForm'
+=======
+import "./App.css";
+import { List } from "./List";
+import { MapLoopList } from "./MapLoopList";
+import React from "react";
+
+
+>>>>>>> 83e4438adaf46c485f8064b397c7387141685ff1
 
 function App(props) {
   return (
