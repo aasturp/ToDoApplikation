@@ -1,26 +1,25 @@
-import React from "react";
+import React from 'react'
 
-export default function Todo({todo}) {
+export default function Todo({ todo }) {
   return (
     <div>
       <ul>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Hej
-            </label>
+        <li className='todo stack-small'>
+          <div className='c-cb'>
+            <input id='todo-0' type='checkbox' checked={todo.completed} />
+            <label className='todo-label' htmlFor='todo-0'></label>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Eat</span>
+          {/*  <div className='btn-group'>
+            <button type='button' className='btn'>
+              Edit <span className='visually-hidden'>Eat</span>
             </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Eat</span>
+            <button type='button' className='btn btn__danger'>
+              Delete <span className='visually-hidden'>Eat</span>
             </button>
-          </div>
+          </div> */}
+          {todo.task}
         </li>
       </ul>
     </div>
-  );
+  )
 }

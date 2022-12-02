@@ -1,19 +1,19 @@
-import "./App.css";
-import TodoForm from "./Components/TodoForm";
-import { useState } from "react";
-import Todo from "./Components/Todo";
+import './App.css'
+import TodoForm from './Components/TodoForm'
+import { useState } from 'react'
+import TodoList from './Components/TodoList'
 
-function App(props) {
-  const [todos, setToDos] = useState([]); //manages the state
+function App() {
+  const [todos, setToDos] = useState([]) //manages the state
 
   function addTask(todo) {
-    setToDos([todo, ...todos]);
+    setToDos(prevState => [...prevState, todo])
   }
 
   return (
-    <div className="todoapp stack-large">
+    <div className='todoapp stack-large'>
       <h1>ToDo</h1>
-      <TodoForm />
+      <TodoForm addTask={addTask} />
       {/* <div className='filters btn-group stack-exception'>
         <button type='button' className='btn toggle-btn' aria-pressed='true'>
           <span className='visually-hidden'>Show </span>
@@ -31,9 +31,10 @@ function App(props) {
           <span className='visually-hidden'> tasks</span>
         </button>
       </div> */}
-      <h2 id="list-heading">Task list</h2>
+      <h2 id='list-heading'>Task list</h2>
+      <TodoList todos={todos} />
 
-      <ul
+      {/*     <ul
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
@@ -42,8 +43,8 @@ function App(props) {
         <Todo />
         <Todo />
         <Todo />
-      </ul>
+      </ul> */}
     </div>
-  );
+  )
 }
-export default App;
+export default App
