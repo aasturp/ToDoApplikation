@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import Todo from './Todo';
 
 const TodoForm = (addTask) => {
   const [todo, setToDo] = useState({
@@ -16,11 +17,15 @@ const TodoForm = (addTask) => {
     }
   }
 
+  function handleTaskInputChange(e){
+    setToDo({...todo, task: e.target.value})
+  }
+
   return (
     <div>
       {/* TodoForm
       <input type='text' /> */}
-      <form>
+      <form onSubmit={handleSubmit}> 
         <h2 className='label-wrapper'>
           <label htmlFor='new-todo-input' className='label__lg'>
             What needs to be done?
@@ -32,6 +37,7 @@ const TodoForm = (addTask) => {
           className='input input__lg'
           name='text'
           autoComplete='off'
+          onChange={handleTaskInputChange}
         />
         <button type='submit' className='btn btn__primary btn__lg'>
           Add

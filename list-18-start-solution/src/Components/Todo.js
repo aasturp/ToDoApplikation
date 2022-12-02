@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Todo() {
+export default function Todo({todo}) {
   return (
     <div>
       <ul>
@@ -8,7 +8,7 @@ export default function Todo() {
           <div className="c-cb">
             <input id="todo-0" type="checkbox" defaultChecked={true} />
             <label className="todo-label" htmlFor="todo-0">
-              Eat
+              Hej
             </label>
           </div>
           <div className="btn-group">
