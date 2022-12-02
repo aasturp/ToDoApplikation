@@ -33,7 +33,7 @@ function App() {
       <h1>☆ My ToDo ☆</h1>
       <TodoForm addTask={addTask} />
 
-      {/* <h2 id='list-heading'>Task list</h2> */}
+      
       <TodoList
         todos={todos}
         toDoComplete={toDoComplete}
