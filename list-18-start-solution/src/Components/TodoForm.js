@@ -1,6 +1,21 @@
 import React from 'react'
+import { useState } from 'react';
 
-const TodoForm = () => {
+const TodoForm = (addTask) => {
+  const [todo, setToDo] = useState({
+    id:"",
+    task:"",
+    completed:false
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (todo.task.trim()){
+      addTask({...todo, id:Math.random()*1000})
+      setToDo({...todo, task:""})
+    }
+  }
+
   return (
     <div>
       {/* TodoForm

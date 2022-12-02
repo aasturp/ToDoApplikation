@@ -2,13 +2,20 @@ import './App.css'
 import { List } from './List'
 import { MapLoopList } from './MapLoopList'
 import TodoForm from './Components/TodoForm'
+import { useState } from 'react'
 
 function App(props) {
-  return (
-    <div className='todoapp stack-large'>
-      <h1>Todo</h1>
-      <TodoForm />
+  const [todos, setToDos] = useState([]); //manages the state 
 
+  function addTask(todo) {
+    setToDos([todo,...todos]);
+  }
+
+  return (
+    
+    <div className='todoapp stack-large'>
+      <h1>ToDo</h1>
+      <TodoForm />
       <div className='filters btn-group stack-exception'>
         <button type='button' className='btn toggle-btn' aria-pressed='true'>
           <span className='visually-hidden'>Show </span>
